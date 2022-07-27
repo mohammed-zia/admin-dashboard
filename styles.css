@@ -99,8 +99,40 @@ input {
   padding-bottom: 10px;
 }
 
-
-
 .project-card{
   border: 1px solid blue;
+}
+
+.right-pane{
+  display: grid;
+  padding: 10px;
+}
+
+.announcements{
+  display: grid;
+  grid-template-rows: 20px 5fr;
+  gap: 35px
+}
+
+.announcement-card{
+  background-color: white;
+}
+
+.trending{
+  display: grid;
+  grid-template-rows: 20px 4fr;
+  gap: 35px
+}
+
+.trend{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.trending-card{
+  background-color: white;
+}
+
+.trend-avatar{
+  height: 40px;
 }
