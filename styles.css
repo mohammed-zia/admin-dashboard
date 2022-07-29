@@ -77,7 +77,7 @@ ul {
   grid-column: 2/3;
   display: grid;
   grid-template-rows: 150px 4fr;
-  margin-left: 250px;
+  /* margin-left: 250px; */
   left: 0;
 }
 
