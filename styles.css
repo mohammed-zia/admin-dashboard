@@ -18,8 +18,9 @@ body{
   display: grid;
   grid-template-rows: 100px 2fr 1fr;
   height: 100%;
-  position: fixed; 
-  width: 255px;
+  position: fixed;
+  z-index: 1; 
+  width: 256.5px;
   left: 0;
   top: 0;
 }
@@ -76,16 +77,18 @@ ul {
   grid-column: 2/3;
   display: grid;
   grid-template-rows: 150px 4fr;
-  /* margin-left: 250px; */
+  margin-left: 250px;
+  left: 0;
 }
 
 .header{
   /* border: 2px solid red; */
-  /* background-color: pink; */
+  background-color: white;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 0.7fr 0.8fr;
   grid-row: 1 / 2;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);  z-index: 1;
 }
 
 .profile-avatar{
@@ -97,8 +100,8 @@ ul {
 }
 
 .content{
-  border: 2px solid green;
-  background-color: lime;
+  /* border: 2px solid green; */
+  background-color: #e2e8f0;
   display: grid;
   grid-template-columns: 4fr minmax(100px, 1fr);
 }
@@ -117,7 +120,23 @@ ul {
   margin-left: 30px;
   gap: 15px;
   align-items: center;
+}
 
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting-text > h4 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.greeting-text > p {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .tools {
@@ -136,6 +155,7 @@ ul {
   height: 35px;
   border-radius: 20px;
   font-weight: 600;
+  box-shadow: 0 0.4px 0.5px 0 rgba(0, 0, 0, 0.2), 0 0.4px 0.5px 0 rgba(0, 0, 0, 0.19);
 }
 
 .search {
@@ -154,14 +174,14 @@ input {
 }
 
 .projects, .right-pane{
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 
 .project-card-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 20px;
 }
 
 .projects{
@@ -173,7 +193,42 @@ input {
 }
 
 .project-card{
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+  text-align: left;
+  border-radius: 15px;
+  box-shadow: 2px 1.5px 4px 0.5px #969696;
+  border-left: 7px solid #f0b429;
+}
+
+.project-card-text{
+  margin: 1rem;
+  margin-left: 28px;
+}
+
+.project-card-text > h4{
+  margin-bottom: 0;
+}
+
+.project-card-text > p{
+  margin-top: 7px;
+  color: grey;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top:20px;
+  gap: 18px;
+}
+
+.card-icons > img {
+  height: 24px;
 }
 
 .right-pane{
@@ -187,8 +242,35 @@ input {
   gap: 35px
 }
 
-.announcement-card{
+.announcement-card, .trending-card{
   background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 1.5px 4px 0.5px #969696;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.announce-text, .announce-heading{
+  margin: 1.4rem;
+}
+
+.announce-text{
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.announce-heading {
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.announcement-divider {
+  border: 0.5px solid #969696;
+  width: 140px;
+  filter: opacity(30%);
 }
 
 .trending{
@@ -200,12 +282,23 @@ input {
 .trend{
   display: grid;
   grid-template-columns: 1fr 4fr;
-}
-
-.trending-card{
-  background-color: white;
+  align-items: center;
+  margin: 1rem;
+  gap: 10px;
 }
 
 .trend-avatar{
   height: 40px;
+}
+
+.trend-profile-desc{
+  font-size: 10px;
+  margin-top: 0;
+  color: grey;
+}
+
+.trend-profile-handle{
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 0;
 }
