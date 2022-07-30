@@ -8,7 +8,7 @@ body{
 
   height: 100vh;
   display: grid;
-  grid-template-columns: minmax(100px, 250px) 4fr;
+  grid-template-columns: minmax(58px, 250px) 4fr;
 }
 
 .sidebar{
@@ -103,7 +103,7 @@ ul {
   /* border: 2px solid green; */
   background-color: #e2e8f0;
   display: grid;
-  grid-template-columns: 4fr minmax(100px, 1fr);
+  grid-template-columns: 4fr 220px;
 }
 
 
@@ -197,7 +197,7 @@ input {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   /* align-items: center; */
   text-align: left;
   border-radius: 15px;
